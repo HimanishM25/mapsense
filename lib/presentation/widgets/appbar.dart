@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mapsense/presentation/screens/accountPage.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -29,7 +30,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: const Icon(Icons.person),
           onPressed: () {
-            // Add your logic here
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AccountPage()),
+              );
+
           },
         ),
       ],
