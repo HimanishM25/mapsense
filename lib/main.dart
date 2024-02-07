@@ -11,21 +11,35 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return MaterialApp(
-        home: StreamBuilder(
-      stream: FirebaseAuth.instance.authStateChanges(),
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return NavigationPage();
-        } else {
-          return RegisterScreen();
-        }
-      },
-    ));
+      theme: ThemeData(
+        primaryColor: colorScheme.primary, 
+        hintColor: colorScheme.secondary, 
+        brightness: Brightness.light, 
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: colorScheme.primary, 
+        hintColor: colorScheme.secondary, 
+      ),
+      themeMode: ThemeMode.system,
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return NavigationPage();
+          } else {
+            return RegisterScreen();
+          }
+        },
+      ),
+    );
   }
 }
 

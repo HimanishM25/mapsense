@@ -26,6 +26,15 @@ class _CoordinateHistoryPageState extends State<CoordinateHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(
+        title: const Text(
+          'History',
+          style:  TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: ListView.builder(
         itemCount: _coordinates.length,
         itemBuilder: (context, index) {
@@ -42,7 +51,7 @@ class _CoordinateHistoryPageState extends State<CoordinateHistoryPage> {
             setState(() {
       _coordinates = [];
     });},
-        child: Icon(Icons.delete),
+        child: const Icon(Icons.delete),
       ),
     );
   }
