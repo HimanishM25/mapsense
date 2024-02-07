@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mapsense/data/geolocator.dart';
 import 'package:mapsense/data/getCoordinates.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,7 +13,6 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       // Add your button logic here
                       getCoordinates(context);
-                      getCityFromCoordinates();
                     },
                     child: Text('Get Coordinates'),
                   ),

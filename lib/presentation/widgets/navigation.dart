@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mapsense/presentation/screens/home.dart';
 import 'package:mapsense/presentation/screens/coordinateHistory.dart';
+import 'package:mapsense/presentation/screens/mapView.dart';
+import 'package:mapsense/presentation/widgets/appbar.dart';
 
 class NavigationPage extends StatefulWidget {
   @override
@@ -13,14 +15,13 @@ class _NavigationPageState extends State<NavigationPage> {
   final List<Widget> _pages = [
     HomePage(),
     const CoordinateHistoryPage(),
+    MapView(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('mapsense'),
-      ),
+      appBar: CustomAppBar(),
       body: _pages[_currentIndex],
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
@@ -37,6 +38,10 @@ class _NavigationPageState extends State<NavigationPage> {
           NavigationDestination(
             icon: Icon(Icons.history),
             label: 'History',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.map),
+            label: 'Map View',
           ),
         ],
       ),
