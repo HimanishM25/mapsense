@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "349223887221",
+    "project_id": "hello-5227a",
+    "storage_bucket": "hello-5227a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349223887221:android:86f888fdb9bd970ee2b33c",
+        "android_client_info": {
+          "package_name": "com.example.mapsense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349223887221-mlo869e73gbd914o6kjrir1r41paoqh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtFd_kP6pG9Uvnj1ypeBiq_uV1-dZQdPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349223887221-citelnmb56mjasmp7lk196p4gjcf3ki7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349223887221:android:2ab493221aa99ebce2b33c",
+        "android_client_info": {
+          "package_name": "com.example.simple_weather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349223887221-mlo869e73gbd914o6kjrir1r41paoqh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtFd_kP6pG9Uvnj1ypeBiq_uV1-dZQdPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349223887221-citelnmb56mjasmp7lk196p4gjcf3ki7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
