@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 class MapView extends StatefulWidget {
   @override
@@ -10,6 +10,7 @@ class MapView extends StatefulWidget {
 
 class _MapViewState extends State<MapView> {
   List<Marker> _markers = [];
+  List<Polyline> _polylines = [];
 
   @override
   void initState() {
@@ -26,6 +27,17 @@ class _MapViewState extends State<MapView> {
         LatLng position = LatLng(coordinate['latitude'], coordinate['longitude']);
         return Marker(markerId: MarkerId(position.toString()), position: position);
       }).toList();
+
+      if (_markers.length > 1) {
+        _polylines = [
+          Polyline(
+            polylineId: PolylineId('route'),
+            points: _markers.map((marker) => marker.position).toList(),
+            color: Colors.blue,
+            width: 3,
+          ),
+        ];
+      }
     });
   }
 
@@ -42,6 +54,7 @@ class _MapViewState extends State<MapView> {
         myLocationButtonEnabled: true,
         initialCameraPosition: _initialPosition,
         markers: Set<Marker>.of(_markers),
+        polylines: Set<Polyline>.of(_polylines),
       ),
     );
   }
