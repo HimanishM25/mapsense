@@ -8,4 +8,5 @@ A Flutter application that demonstrates location-based services. The app is capa
 - GoogleMaps API
 
 ## Preview
-The app apk is provided in the Releases tab of this repository. 
+The app apk is provided in the Releases tab of this repository. The video demonstration of the app at:
+https://www.youtube.com/watch?v=BfB70UbEXUQ
