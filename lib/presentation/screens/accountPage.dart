@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:mapsense/presentation/screens/registerScreen.dart';
+import 'package:mapsense/data/getIdentity.dart';
+import 'package:mapsense/data/logoutUser.dart';
 
 class AccountPage extends StatelessWidget {
   final User? user = FirebaseAuth.instance.currentUser;
@@ -20,18 +21,13 @@ class AccountPage extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              user?.email ?? 'Unknown',
+              fetchUserIdentity() as String,
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                FirebaseAuth.instance.signOut();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegisterScreen()), 
-                );
-              },
+
+              onPressed: () => logoutUser(context),
               child: Text('Logout'),
             ),
           ],
