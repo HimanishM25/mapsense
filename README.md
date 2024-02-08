@@ -1,16 +1,11 @@
-# mapsense
+# Mapsense App
 
-A new Flutter project.
+A Flutter application that demonstrates location-based services. The app is capable of collecting GPS coordinates from the client device, storing them in a database, and performing logical operations such as drawing lines on the map based on the collected data. The app also implements authentication using email and password. Clean coding practices are followed as per "Clean Architecture".
 
-## Getting Started
+## Technologies used:
+- Flutter
+- FireAuth
+- GoogleMaps API
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Preview
+The app apk is provided in the Releases tab of this repository. 
