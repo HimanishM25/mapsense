@@ -29,7 +29,7 @@ class AccountPage extends StatelessWidget {
                 FirebaseAuth.instance.signOut();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RegisterScreen()), // Navigate to the registerUser page
+                  MaterialPageRoute(builder: (context) => RegisterScreen()), 
                 );
               },
               child: Text('Logout'),

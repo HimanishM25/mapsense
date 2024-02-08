@@ -8,11 +8,12 @@ Future<void> loginUser(BuildContext context, String email, String password) asyn
       email: email,
       password: password,
     );
+    // Login successful
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => NavigationPage()),
     );
-    // Login successful, do something with the userCredential
+    
   } on FirebaseAuthException catch (e) {
     if (e.code == 'user-not-found') {
       ScaffoldMessenger.of(context).showSnackBar(

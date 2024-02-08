@@ -33,7 +33,7 @@ class _MapViewState extends State<MapView> {
           Polyline(
             polylineId: PolylineId('route'),
             points: _markers.map((marker) => marker.position).toList(),
-            color: Colors.blue,
+            color: Colors.orange,
             width: 3,
           ),
         ];
